@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 20_230_920_135_845) do
   enable_extension 'plpgsql'
 
+  # Define 'comments' table
   create_table 'comments', force: :cascade do |t|
     t.string 'text'
     t.bigint 'userId_id'
@@ -23,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_920_135_845) do
     t.index ['userId_id'], name: 'index_comments_on_userId_id'
   end
 
+  # Define 'likes' table
   create_table 'likes', force: :cascade do |t|
     t.bigint 'userId_id'
     t.bigint 'postId_id'
@@ -32,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_920_135_845) do
     t.index ['userId_id'], name: 'index_likes_on_userId_id'
   end
 
+  # Define 'posts' table
   create_table 'posts', force: :cascade do |t|
     t.string 'title'
     t.string 'text'
@@ -43,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_920_135_845) do
     t.index ['authorId_id'], name: 'index_posts_on_authorId_id'
   end
 
+  # Define 'users' table
   create_table 'users', force: :cascade do |t|
     t.string 'name'
     t.string 'photo'
@@ -52,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_920_135_845) do
     t.datetime 'updated_at', null: false
   end
 
+  # Add foreign keys
   add_foreign_key 'comments', 'posts', column: 'postId_id'
   add_foreign_key 'comments', 'users', column: 'userId_id'
   add_foreign_key 'likes', 'posts', column: 'postId_id'

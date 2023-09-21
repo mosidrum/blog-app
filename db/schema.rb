@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# rubocop:disable Metrics/BlockLength
 ActiveRecord::Schema[7.0].define(version: 20_230_920_135_845) do
   enable_extension 'plpgsql'
 

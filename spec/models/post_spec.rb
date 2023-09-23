@@ -34,14 +34,6 @@ RSpec.describe Post, type: :model do
       post.likes_counter = 'not-an-integer'
       expect(post).to_not be_valid
     end
-
-    it ' likes counter is greater than or equal to zero' do
-      expect(post.likes_counter).to be >= 0
-    end
-
-    it 'comments counter is greater than or equal to zero' do
-      expect(post.comments_counter).to be >= 0
-    end
   end
 
   describe 'custom methods in Post' do

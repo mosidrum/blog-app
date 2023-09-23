@@ -1,5 +1,6 @@
 class Comment < ApplicationRecord
-  belongs_to :post
+  belongs_to :post, foreign_key: 'postId_id'
+  belongs_to :user, foreign_key: 'userId_id'
 
   after_create :update_comment_counter
 

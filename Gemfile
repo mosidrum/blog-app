@@ -25,8 +25,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bootsnap', require: false
 
-group :development, :test do
-  gem 'debug', platforms: %i[mri mingw x64_mingw]
+group :development, :test do  
   gem 'rspec-rails', '~> 5.0'
 end
 

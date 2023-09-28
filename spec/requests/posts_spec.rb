@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
+RSpec.describe 'Posts', type: :request do
   describe 'GET /users/732/posts' do
     it 'returns a 200 OK status' do
       get '/users/732/posts'
@@ -10,7 +10,7 @@ RSpec.describe "Posts", type: :request do
     it 'renders the index template' do
       get '/users/732/posts'
       expect(response).to render_template(:index)
-      end
+    end
 
     it 'renders the show template' do
       get '/users/732/posts/2'

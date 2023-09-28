@@ -42,10 +42,10 @@ button a {
   gap: 10px;
 }
 
-.post-heading h3 a {
+h5 a {
   text-decoration: none;
 }
 
-h5 a {
+.post-heading h3 a {
   text-decoration: none;
 }

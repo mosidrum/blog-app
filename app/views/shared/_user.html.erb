@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag('index') %>
+<div class="container">
+  <div class="user">
+    <img src= <% user.photo %> alt="avatar.jpg"/>
+    <div class="details">
+      <h1> <%= link_to user.name, user_path(user) %> </h1>
+      <p>Number of posts: <%= user.posts.count %> </p>
+    </div>
+  </div>
+</div>

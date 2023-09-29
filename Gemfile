@@ -16,6 +16,8 @@ gem 'importmap-rails'
 gem 'turbo-rails'
 
 gem 'stimulus-rails'
+gem 'sass-rails', '~> 6.0'
+
 
 gem 'jbuilder'
 

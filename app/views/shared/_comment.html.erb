@@ -1,8 +1,10 @@
 <div>
   <% comments.each do |comment|%>
-    <div class="comment">
-      <b><%= comment.user.name %></b>
-      <i><%= comment.text %></i>
-    </div>
+   <div class="comment">
+     <h4><%= comment.user.name %></h4>
+     <p><%= comment.text %></p>
+   </div>
   <% end %>
 </div>
+
+

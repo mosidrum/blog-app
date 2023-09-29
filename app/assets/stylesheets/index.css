@@ -1,51 +1,72 @@
 .container {
+  width: 50%;
+  height: 20vh;
+  margin: 70px auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 50px;
-  text-align: left;
-  padding: 20px;
-}
-
-.user {
-  width: 100%;
-  display: flex;
+  align-items: center;
   justify-content: space-around;
-  gap: 50px;
 }
 
-.comment {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+h2 a, h3 a,
+button a
+{
+  text-decoration: none;
+  font-size: 20px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px;
+  padding: 20px;
+  width: 100%;
 }
 
-button a {
-  text-decoration: none;
+
+.user-photo-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
-.bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.user-photo {
+  width: 100%;
+  height: auto;
+}
+
+.post-container {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .post-heading {
+  border: 1px solid lightgray;
+  padding: 20px;
+}
+
+.post-title {
+  border: 1px solid lightgray;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.post-details {
+  width: 50vw;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  margin: 20px auto;
+  border: 1px solid gray;
+  padding: 20px;
+  text-align: center;
 }
 
-h5 a {
-  text-decoration: none;
+.comment {
+  text-align: left;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px auto;
 }
-
-.post-heading h3 a {
-  text-decoration: none;
+.posts-index {
+  width: 50vw;
+  margin: 10px auto;
+  text-align: center;
 }

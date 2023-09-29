@@ -39,7 +39,7 @@ button {
   text-align: center;
 }
 
-.comment-form input[type="submit"]{
+.comment-form input[type="submit"] {
   padding: 10px;
 }
 
@@ -61,7 +61,7 @@ button {
   width: 100%;
   height: auto;
 }
-
+ 
 .post-container {
   width: 50vw;
   margin: 0 auto;

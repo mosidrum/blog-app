@@ -1,0 +1,9 @@
+<div>
+  <button>Add a new comment</button>
+  <%= form_with model: @comment, url: user_post_comments_to_path do |form| %>
+    <% form.label :text %>
+    <% form.text_field :text %>
+    <% form.hidden_field post_id, value: params[:post_id] %>
+    <% form.submit "Comment" %>
+  <% end %>
+</div>

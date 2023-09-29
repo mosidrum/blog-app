@@ -1,10 +1,10 @@
 <%= stylesheet_link_tag('index') %>
-<h3>
-  <%= link_to 'Add comment to this post', new_user_post_comment_path(user_id: current_user.id, post_id: @post.id) %>
-</h3>
 <div class="post-details">
   <span>
     <h1> <%= @post.title %> by <%= @user.name %> </h1>
+    <p>
+      <%= link_to 'Comment on this post', new_user_post_comment_path(user_id: current_user.id, post_id: @post.id) %>
+    </p>
     <span>Comments: <%= @post.comments.count %> Likes: <%= @post.likes_counter %> </span>
   </span>
   <p> <%= @post.text %>

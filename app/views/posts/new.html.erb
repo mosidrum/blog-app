@@ -1,10 +1,13 @@
-<div>
+<div class="comment-container">
   <h1>Add a new post</h1>
-  <%= form_with model: @post, url: user_posts_path do |form| %>
-    <%= form.label :title%>
-    <%= form.text_field :title%><br>
-    <%= form.label :text%>
-    <%= form.text_area :text, cols:30, row: 10%><br>
-    <%= form.submit "Add post" %>
-  <% end %>
+  <div class="comment-form">
+    <%= form_with model: @post, url: user_posts_path do |form| %>
+      <%= form.label :title%>
+      <%= form.text_field :title%><br>
+
+      <%= form.label :text%>
+      <%= form.text_area :text, cols:50, row: 50 %><br>
+      <%= form.submit "Add post" %>
+    <% end %>
+  </div>
 </div>

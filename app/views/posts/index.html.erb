@@ -1,28 +1,12 @@
 <%= stylesheet_link_tag('index') %>
-<div class="container">
-  <div class="user">
-    <img src="example.com" alt="image">
+<%= render 'shared/user', user:@user %>
+
+<div class="posts-index">
+  <% @posts.each do |post| %>
     <div>
-      <h1>Username</h1>
-      <p>Number of posts x</p>
+      <h3> <%= link_to post.title, user_post_path(@user,post) %></h3>
+      <%= render 'shared/post', post: post %>
+      <%= render 'shared/comment', comments: post.recent_comments %>
     </div>
-  </div>
-  <div>
-    <h2>post 1</h2>
-    <p>comment 1</p>
-    <p>comment 2</p>
-    <p>comment 3</p>
-  </div>
-  <div>
-    <h2>post 2</h2>
-    <p>comment 1</p>
-    <p>comment 2</p>
-    <p>comment 3</p>
-  </div>
-  <div>
-    <h2>post 3</h2>
-    <p>comment 1</p>
-    <p>comment 2</p>
-    <p>comment 3</p>
-  </div>
+  <% end %>
 </div>

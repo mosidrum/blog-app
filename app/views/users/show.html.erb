@@ -1,16 +1,21 @@
-<%= stylesheet_link_tag('index') %>
-<div class="container">
-  <div class="user">
-    <img src="example.com" alt="image">
-    <div>
-      <h1>Username</h1>
-      <p>Number of posts x</p>
+<%= render 'shared/user', user:@user %>
+
+<div class="post-container">
+  <div class="post-heading">
+    <h2>About me</h2>
+    <p><%= @user.bio %></p>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="post-title">
+      <h4>Post</h4>
+      <h3> <%= link_to post.title, user_post_url(@user, post) %> </h3>
+      <%= render 'shared/post', post:post %>
     </div>
-  </div>
-  <div>
-    <h2>Bio</h2>
-    <p>post 1</p>
-    <p>post 2</p>
-    <p>post 3</p>
-  </div>
+  <% end %>
+  <div class="btn">
+    <button>
+      <%= link_to 'Create new post', new_user_post_path(current_user) %>
+    </button>
+  </div>  
+  <button> <%= link_to "See all posts", user_posts_path(@user) %></button>
 </div>

@@ -1,18 +1,15 @@
 <%= stylesheet_link_tag('index') %>
-<div class="container">
-  <div class="user-post">
-    <h3>Post #1 by username</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam doloremque ex officiis quae veniam.
-      Illum nobis numquam pariatur porro praesentium provident quas repellat. Accusamus deserunt iste laboriosam
-      pariatur perspiciatis sequi.
+<div class="post-details">
+  <span>
+    <h1> <%= @post.title %> by <%= @user.name %> </h1>
+    <p>
+      <%= link_to 'Comment on this post', new_user_post_comment_path(user_id: current_user.id, post_id: @post.id) %>
     </p>
-  </div>
-  <div>
-    <p>username comment 1</p>
-    <p>username comment 2</p>
-    <p>username comment 3</p>
-    <p>username comment 4</p>
-    <p>username comment 5</p>
-    <p>username comment 6</p>
-  </div>
+    <span>Comments: <%= @post.comments.count %> Likes: <%= @post.likes_counter %> </span>
+  </span>
+  <p> <%= @post.text %>
+    <%= form_with model: @like, url:user_post_likes_path(post_id: @post.id) do |l| %>
+      <%= l.submit  "Like", class: ["new-post-btn submit-btn"]%>
+      <% end %>
+  <%= render 'shared/comment', comments: @comments %>
 </div>

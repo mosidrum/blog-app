@@ -24,6 +24,7 @@ default: &default
 development:
   <<: *default
   database: blog-app
+  adapter: postgresql
   username: postgres
   password: mosi24031994
   host: localhost
@@ -62,6 +63,7 @@ development:
 test:
   <<: *default
   database: blog_app_test
+  adapter: postgresql
   username: postgres
   password: mosi24031994
   host: localhost

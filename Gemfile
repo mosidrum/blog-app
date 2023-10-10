@@ -26,7 +26,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 group :development, :test do
-  gem 'rspec-rails', '~> 5.0'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_bot_rails', '~> 6.0'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -34,7 +37,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
 end

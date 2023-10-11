@@ -73,7 +73,7 @@ RSpec.feature 'Post Index Page' do
     click_link '2'
     expect(page).not_to have_content(@first_post.title)
     expect(page).not_to have_content(@second_post.title)
-  end 
+  end
 end
 
 # rubocop:enable Metrics/BlockLength

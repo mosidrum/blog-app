@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.feature 'User Index Page' do
   before(:each) do
     @first_user = create(

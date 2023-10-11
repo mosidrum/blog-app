@@ -26,8 +26,10 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   Enabled: false
-  AllowedMethods: ['describe']
-  Max: 30
+
+RSpec:
+  Exclude:
+    - 'spec/**/*_spec.rb'
 
 Style/Documentation:
   Enabled: false

@@ -25,7 +25,7 @@ RSpec.feature 'Post Show Page' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@post.likes_counter)
   end
-    
+
   it 'see the body of post' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@post.text)

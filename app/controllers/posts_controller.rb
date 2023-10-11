@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   def index
     @user = User.includes(posts: :comments).find(params[:user_id])
@@ -33,5 +35,3 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :text)
   end
 end
-
-# rubocop:enable Metrics/BlockLength

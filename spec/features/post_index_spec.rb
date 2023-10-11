@@ -3,13 +3,11 @@ RSpec.feature 'Post Index Page' do
   before(:each) do
     @second_user = create(:user)
     @first_user = create(
-      :user, name: 'user1', bio: 'Teacher from Uganda',
-      photo: 'user1_profile_image.jpg', posts_counter: 0
-      )
+      :user, name: 'user1', bio: 'Teacher from Uganda', photo: 'user1_profile_image.jpg', posts_counter: 0
+    )
     @first_post = create(:post, author_id: @first_user.id, title: 'Hello')
     @second_post = create(
-      :post, author_id: @first_user.id, title: 'World',
-      text: 'Hi men', comments_counter: 1, likes_counter: 2
+      :post, author_id: @first_user.id, title: 'World', text: 'Hi men', comments_counter: 1, likes_counter: 2
     )
     @comment = create(:comment, post_id: @second_post.id, user_id: @second_user.id, text: 'a comment')
   end

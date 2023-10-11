@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :user do
     sequence(:name) { |n| "User#{n}" }
     bio { "A user's bio" }
-    photo { "user_profile_image.jpg" }
+    photo { 'user_profile_image.jpg' }
     posts_counter { 0 }
 
     trait :with_recent_posts do
@@ -29,6 +29,6 @@ FactoryBot.define do
   factory :comment do
     association :user, factory: :user
     association :post, factory: :post
-    text { "This is a comment." }
+    text { 'This is a comment.' }
   end
 end

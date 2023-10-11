@@ -15,10 +15,10 @@ FactoryBot.define do
   factory :post do
     association :author, factory: :user
     sequence(:title) { |n| "Post Title #{n}" }
-    text { "This is the content of the post." }
-    comments_counter { 0 }
-    likes_counter { 0 }
-
+    text { 'This is the content of the post.' }
+    comments_counter 0
+    likes_counter 0
+  
     trait :with_comments do
       after(:create) do |post|
         create_list(:comment, 5, post: post)

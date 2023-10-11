@@ -1,9 +1,12 @@
 require 'rails_helper'
-
 RSpec.feature 'User Index Page' do
   before(:each) do
-    @first_user = create(:user, name: 'first_user', photo: 'first_user_profile_image.jpg', posts_counter: 0)
-    @second_user = create(:user, name: 'second_user', photo: 'second_user_profile_image.jpg', posts_counter: 1)
+    @first_user = create(
+      :user, name: 'first_user', photo: 'first_user_profile_image.jpg', posts_counter: 0
+    )
+    @second_user = create(
+      :user, name: 'second_user', photo: 'second_user_profile_image.jpg', posts_counter: 1
+    )
   end
 
   it 'sees the username of all other users' do

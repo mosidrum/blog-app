@@ -1,8 +1,10 @@
 require 'rails_helper'
-
 RSpec.feature 'User Show Page' do
   before(:each) do
-    @first_user = create(:user, name: 'first_user', bio: 'Great britain', photo: 'first_user_profile_image.jpg', posts_counter: 0)
+    @first_user = create(
+      :user, name: 'first_user', bio: 'Great britain', photo: 'first_user_profile_image.jpg',
+      posts_counter: 0
+    )
     @first_post = create(:post, author_id: @first_user.id, title: 'Victory is a fine girlfriend')
     @second_post = create(:post, author_id: @first_user.id, title: 'Drumming is my first love')
     @third_post = create(:post, author_id: @first_user.id, title: 'Who goes there')

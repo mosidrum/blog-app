@@ -63,9 +63,7 @@ RSpec.feature 'Post Index Page' do
   end
 
   it 'displays a list of posts with pagination' do
-
     create_list(:post, 20, author: @first_user)
-
     visit user_posts_path(@first_user)
 
     expect(page).to have_content(@first_post.title)
@@ -73,7 +71,6 @@ RSpec.feature 'Post Index Page' do
     expect(page).to have_css('.pagination')
 
     click_link '2'
-
     expect(page).not_to have_content(@first_post.title)
     expect(page).not_to have_content(@second_post.title)
   end 

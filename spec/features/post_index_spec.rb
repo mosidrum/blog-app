@@ -1,4 +1,7 @@
+# rubocop:disable Metrics/BlockLength
+
 require 'rails_helper'
+
 RSpec.feature 'Post Index Page' do
   before(:each) do
     @second_user = create(:user)
@@ -60,3 +63,4 @@ RSpec.feature 'Post Index Page' do
   end
 end
 
+# rubocop:enable Metrics/BlockLength

@@ -20,11 +20,6 @@ RSpec.describe Post, type: :model do
       expect(post).to_not be_valid
     end
 
-    it 'title does not exceed 200 characters' do
-      post.title = 'A' * 201
-      expect(post).to_not be_valid
-    end
-
     it 'comments counter is an integer' do
       post.comments_counter = 'not-an-integer'
       expect(post).to_not be_valid

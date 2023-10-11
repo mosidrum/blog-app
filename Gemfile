@@ -7,6 +7,8 @@ gem 'rails', '~> 7.0.8'
 
 gem 'sprockets-rails'
 
+gem 'will_paginate'
+
 gem 'pg', '~> 1.1'
 
 gem 'puma', '~> 5.0'
@@ -26,7 +28,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 group :development, :test do
-  gem 'rspec-rails', '~> 5.0'
+  gem 'capybara'
+  gem 'factory_bot_rails', '~> 6.0'
+  gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -34,7 +39,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
 end

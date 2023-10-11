@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 RSpec.feature 'Post Index Page' do
   before(:each) do
@@ -63,4 +60,3 @@ RSpec.feature 'Post Index Page' do
   end
 end
 
-# rubocop:enable Metrics/BlockLength

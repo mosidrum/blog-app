@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 RSpec.feature 'User Show Page' do
   before(:each) do
@@ -67,5 +64,3 @@ RSpec.feature 'User Show Page' do
     expect(current_path).to eq(user_posts_path(@first_user))
   end
 end
-
-# rubocop:enable Metrics/BlockLength

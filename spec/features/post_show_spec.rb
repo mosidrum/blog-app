@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 RSpec.feature 'Post Show Page' do
   before(:each) do
@@ -44,5 +41,3 @@ RSpec.feature 'Post Show Page' do
     expect(page).to have_content(@comment.text)
   end
 end
-
-# rubocop:enable Metrics/BlockLength

@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 RSpec.feature 'Post Show Page' do
   before(:each) do

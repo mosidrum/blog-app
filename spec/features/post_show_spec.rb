@@ -1,4 +1,7 @@
+# rubocop:disable Metrics/BlockLength
+
 require 'rails_helper'
+
 RSpec.feature 'Post Show Page' do
   before(:each) do
     @first_user = create(
@@ -16,28 +19,30 @@ RSpec.feature 'Post Show Page' do
     expect(page).to have_content(@post.title)
   end
 
-  it 'sees the name of user of post' do
+  it 'sees the name of the user of the post' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@first_user.name)
   end
 
-  it 'see the number of likes of post' do
+  it 'sees the number of likes of the post' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@post.likes_counter)
   end
 
-  it 'see the body of post' do
+  it 'sees the body of the post' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@post.text)
   end
 
-  it 'see the username of commenters' do
+  it 'sees the username of commenters' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@second_user.name)
   end
 
-  it 'see the comment of each commenters' do
+  it 'sees the comment of each commenter' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@comment.text)
   end
 end
+
+# rubocop:enable Metrics/BlockLength

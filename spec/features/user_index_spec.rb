@@ -1,4 +1,7 @@
+# rubocop:disable Metrics/BlockLength
+
 require 'rails_helper'
+
 RSpec.feature 'User Index Page' do
   before(:each) do
     @first_user = create(
@@ -37,3 +40,5 @@ RSpec.feature 'User Index Page' do
     expect(current_path).to eq(user_path(@first_user))
   end
 end
+
+# rubocop:enable Metrics/BlockLength

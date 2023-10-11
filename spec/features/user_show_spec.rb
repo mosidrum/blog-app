@@ -66,6 +66,12 @@ RSpec.feature 'User Show Page' do
 
     expect(current_path).to eq(user_posts_path(@first_user))
   end
+
+  it 'See all posts button and redirects to user\'s post index page' do
+    visit user_path(@first_user)
+    click_link 'See all posts'
+    expect(current_path).to eq(user_posts_path(@first_user))
+  end
 end
 
 # rubocop:enable Metrics/BlockLength

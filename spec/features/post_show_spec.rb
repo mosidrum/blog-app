@@ -9,7 +9,7 @@ RSpec.feature 'Post Show Page' do
     )
     @second_user = create(:user, name: 'second_user')
     @post = create(
-      :post, author_id: @first_user.id, title: 'Hello', comments_counter: 2, likes_counter: 1, text: 'Post body'
+      :post, author_id: @first_user.id, title: 'Hello', comments_counter: 1, likes_counter: 1, text: 'Post body'
     )
     @comment = create(:comment, user_id: @second_user.id, post_id: @post.id, text: 'my comment')
   end
@@ -42,6 +42,11 @@ RSpec.feature 'Post Show Page' do
   it 'sees the comment of each commenter' do
     visit user_post_path(@first_user, @post)
     expect(page).to have_content(@comment.text)
+  end
+
+  it 'sees the number of comments on the post' do
+    visit user_post_path(@first_user, @post)
+    expect(page).to have_text(@post.comments_counter.to_s)
   end
 end
 

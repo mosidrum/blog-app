@@ -60,3 +60,5 @@ RSpec.feature 'Post Index Page' do
     expect(current_path).to eq(user_post_path(@first_user, @second_post))
   end
 end
+
+# rubocop:enable Metrics/BlockLength

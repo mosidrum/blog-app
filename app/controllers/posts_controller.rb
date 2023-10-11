@@ -33,3 +33,5 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :text)
   end
 end
+
+# rubocop:enable Metrics/BlockLength

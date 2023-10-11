@@ -42,3 +42,5 @@ RSpec.feature 'Post Show Page' do
     expect(page).to have_content(@comment.text)
   end
 end
+
+# rubocop:enable Metrics/BlockLength

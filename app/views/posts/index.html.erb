@@ -9,4 +9,5 @@
       <%= render 'shared/comment', comments: post.recent_comments %>
     </div>
   <% end %>
+  <%= will_paginate @posts %>
 </div>

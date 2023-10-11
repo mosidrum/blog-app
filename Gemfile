@@ -7,6 +7,8 @@ gem 'rails', '~> 7.0.8'
 
 gem 'sprockets-rails'
 
+gem 'will_paginate'
+
 gem 'pg', '~> 1.1'
 
 gem 'puma', '~> 5.0'

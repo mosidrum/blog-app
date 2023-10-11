@@ -61,6 +61,22 @@ RSpec.feature 'Post Index Page' do
     click_link @second_post.title
     expect(current_path).to eq(user_post_path(@first_user, @second_post))
   end
+
+  it 'displays a list of posts with pagination' do
+
+    create_list(:post, 20, author: @first_user)
+
+    visit user_posts_path(@first_user)
+
+    expect(page).to have_content(@first_post.title)
+    expect(page).to have_content(@second_post.title)
+    expect(page).to have_css('.pagination')
+
+    click_link '2'
+
+    expect(page).not_to have_content(@first_post.title)
+    expect(page).not_to have_content(@second_post.title)
+  end 
 end
 
 # rubocop:enable Metrics/BlockLength

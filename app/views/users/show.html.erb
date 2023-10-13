@@ -11,11 +11,6 @@
       <h3> <%= link_to post.title, user_post_url(@user, post) %> </h3>
       <%= render 'shared/post', post:post %>
     </div>
-  <% end %>
-  <div class="btn">
-    <button>
-      <%= link_to 'Create new post', new_user_post_path(current_user) %>
-    </button>
-  </div>  
+  <% end %> 
   <button> <%= link_to "See all posts", user_posts_path(@user) %></button>
 </div>

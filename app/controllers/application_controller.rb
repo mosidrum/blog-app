@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+  before_action :authenticate_user!
 
-  def current_user
-    User.first
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || users_path
+  end
+
+  private
+
+  def set_current_user
+    @current_user = current_user
   end
 end

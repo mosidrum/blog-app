@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
@@ -34,6 +36,19 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'localhost:3000',
+    user_name: 'mjustuse@gmail.com',
+    password: 'mosi24031994',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
@@ -68,4 +83,6 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

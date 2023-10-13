@@ -1,10 +1,11 @@
-.registration-form {
+.resend-confirmation-form {
   margin: 0 auto;
   width: 40%;
   padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #f7f7f7;
-  box-shadow: 0 0 10px rgba(172, 145, 145, 0.1);
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   text-align: center;
 }
 
@@ -14,18 +15,20 @@
 }
 
 .input-field {
-  width: 95%;
-  margin-bottom: 10px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
 }
 
+.actions {
+  margin-top: 20px;
+}
+
 .submit-button {
   background-color: #007bff;
   color: #fff;
-  margin-top: 10px;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
